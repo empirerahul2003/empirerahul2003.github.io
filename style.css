@@ -49,33 +49,70 @@ nav ul li a:hover {
 }
 
 #hero {
+    position: relative;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    background-image: url('your-background-image.jpg'); /* Background image */
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.slideshow-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow-image.active {
+    opacity: 1;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    z-index: 1;
 }
 
 #hero h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .btn {
-    background-color: #ff4d4d; /* Red button */
-    color: #fff;
+    display: inline-block;
     padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #e60000; /* Darker red on hover */
+    background-color: #0056b3;
 }
 
 section {
@@ -95,6 +132,48 @@ footer {
     background: rgba(0, 0, 0, 0.8);
     text-align: center;
 }
+
+/* Interactive Resume Styles */
+#resume {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.resume-section {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.resume-toggle {
+    background-color: #f5f5f5;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.resume-toggle .toggle-icon {
+    float: right;
+}
+
+.resume-content {
+    display: none;
+    padding: 15px;
+}
+
+.resume-item {
+    margin-bottom: 15px;
+}
+
+.resume-item h4 {
+    margin-bottom: 5px;
+}
+
+.resume-item ul {
+    padding-left: 20px;
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -106,5 +185,69 @@ footer {
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
 
+.about-content p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+
+.social-icon i {
+    font-size: 24px;
+}
+
+.x-icon {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    transition: fill 0.3s ease; /* Add transition for smooth color change */
+}
+
+/* Hover effects */
+.social-icon:hover {
+    color: #007bff; /* Default hover color */
+}
+
+.social-icon:hover .x-icon {
+    fill: #007bff; /* Match the hover color of other icons */
+}
+
+/* Specific colors for each platform on hover (optional) */
+.social-icon:hover .fa-github {
+    color: #6e5494;
+}
+
+.social-icon:hover .fa-linkedin {
+    color: #0077B5;
+}
+
+.social-icon:hover .x-icon {
+    fill: #ffffff; /* X's brand color is typically white on black */
+}

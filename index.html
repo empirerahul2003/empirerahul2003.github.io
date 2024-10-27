@@ -3,33 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Personal Website</title>
+    <title>Rahul Kumar | Personal Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
-            <h1>Your Name</h1>
+            <h1>Rahul Kumar</h1>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="resume.html">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="hero">
-        <h2>Welcome to My Personal Space</h2>
-        <p>Your brief tagline goes here.</p>
-        <a href="#projects" class="btn">See My Work</a>
+        <div class="slideshow-container"></div>
+        <div class="hero-content">
+            <h2>Welcome to My Personal Space</h2>
+            <p>Seeking Connections: The Threads That Weave Us Together.</p>
+            <a href="#projects" class="btn">See My Work</a>
+        </div>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Introduce yourself here. Talk about your background, interests, and what you do.</p>
+        <div class="about-content">
+            <p>Hello! I'm Rahul Kumar, a Master's student in Physics at the Central University of Himachal Pradesh. I'm deeply fascinated by quantum computing, data science, and exploring how mathematical concepts like Geometric Algebra can revolutionize our understanding of the physical world.</p>
+  
+            <p>From a young age, I was captivated by the mysteries of the universe, which led me to pursue a career in physics. During my studies, I developed a keen interest in the intersections of physics and computer science, particularly in quantum computing and data science, which I continue to explore through research and projects.</p>
+            
+            <p>My core interests lie in quantum computing and mathematical frameworks that simplify complex concepts. I enjoy working on projects that involve advanced mathematical techniques, and I'm always eager to learn more about the applications of AI in physics. Skills I bring include Python, data analysis, and a deep understanding of mathematical modelling in physics.</p>
+            
+            <p>Currently, I'm working on a project that applies the Phase Function Method to nucleon-nucleon scattering, aiming to deepen our understanding of nuclear forces. Additionally, I'm developing a web app for chatbots, which allows users to select and deploy custom templates.</p>
+            
+            <p>Outside of academics, I'm an avid reader and enjoy coding small projects for fun. I believe in lifelong learning and often take time to explore new areas, whether it's in physics, technology, or even philosophy.</p>
+            
+            <p>If you're interested in connecting, feel free to reach out! I'm always excited to collaborate, discuss ideas, and explore new opportunities.</p>
+        </div>
     </section>
 
     <section id="projects">
@@ -44,7 +62,22 @@
     <footer id="contact">
         <h2>Contact</h2>
         <p>Feel free to reach out!</p>
-        <p>Email: your.email@example.com</p>
+        <p>Email: empirerahul2003@gmail.com</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://x.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-icon">
+                <svg class="x-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227">
+                    <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/>
+                </svg>
+            </a>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
